@@ -3,13 +3,14 @@ package fr.fms.entities;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Course {
+public class Course<T> {
 	
 	private String label;
 	private Date startDate;
 	private Date endDate;
 	private ArrayList<Student> studentList;
 	private Professor professor;
+	private ArrayList<T> courseList = new ArrayList<T>();
 	
 	public Course(String label, Date startDate, Date endDate, ArrayList<Student> studentList,
 			Professor professor) {
@@ -63,6 +64,18 @@ public class Course {
 
 	public void setProfessor(Professor professor) {
 		this.professor = professor;
+	}
+	
+	public void addCourse(T course){
+		courseList.add(course);
+	}
+	
+	public void  modifyCourse(){
+		
+	}
+	
+	public void  removeCourse(T course){
+		courseList.remove(course);
 	}
 
 	@Override
