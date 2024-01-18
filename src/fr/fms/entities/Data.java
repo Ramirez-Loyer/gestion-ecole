@@ -1,10 +1,13 @@
 package fr.fms.entities;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Data {
-
+	DateFormat shortDateFormat = DateFormat.getDateTimeInstance(
+	        DateFormat.SHORT,
+	        DateFormat.SHORT);
 	public static ArrayList<Person> studentList = new ArrayList<>();
 	public static ArrayList<Person> professorList = new ArrayList<>();
 	public static ArrayList<Course> courseList = new ArrayList<>();
@@ -71,4 +74,23 @@ public class Data {
 			System.out.println(course);
 		}
 	}
+	
+	// Affiche la liste des étudiants inscrit à un cours donné.
+	public static void displayStudentList(String course) {
+		int courseNumber = -1;
+		switch (course) {
+		case "math" : courseNumber = 0; 
+		case "musique" : courseNumber = 1; 
+		case "francais" : courseNumber = 2; 
+		case "histoire" : courseNumber = 3; 
+		case "geographie" : courseNumber = 4; 
+		case "anglais" : courseNumber = 5; 
+		}
+		Course courseList = Data.courseList.get(courseNumber);
+		ArrayList<Person> studentsList = courseList.getStudentList();
+		System.out.println(course + " Student List" + studentsList);
+		
+		// Trouver si address identique entre élèves
+	}
+	
 }

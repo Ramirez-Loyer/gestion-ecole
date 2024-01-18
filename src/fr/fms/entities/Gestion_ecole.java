@@ -1,6 +1,6 @@
 package fr.fms.entities;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Gestion_ecole {
 public static void main(String[] args) {
@@ -9,7 +9,9 @@ public static void main(String[] args) {
 	Data.addProfessor();
 	Data.addCourse();
 	
-	System.out.println("***********" + Data.studentList);
+//	System.out.println("***********" + Data.studentList);
+	
+Data.displayStudentList("musique");
 	
 }
 }
