@@ -64,7 +64,7 @@ public abstract class Person {
 
 	@Override
 	public String toString() {
-		return "Person [lastName=" + lastName + ", firstName=" + firstName + ", age=" + age + "]";
+		return "Person [lastName=" + lastName + ", firstName=" + firstName + ", age=" + age + "]" + address;
 	}
 
 	
