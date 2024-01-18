@@ -12,7 +12,7 @@ public class Data {
 	
 	public static void addStudent() {
 		Students alejandra = new Students("alejandra", "ramirez", 22, new Address("48 rue des roses", "Toulouse", 31300, "France"), courseList, 25960 );
-		Students frederic = new Students("frédéric", "bec", 32, new Address("48 impasse des tulipes", "Marseille", 13300, "France"), courseList, 45100 );
+		Students frederic = new Students("frï¿½dï¿½ric", "bec", 32, new Address("48 impasse des tulipes", "Marseille", 13300, "France"), courseList, 45100 );
 		Students gilles = new Students("gilles", "quodbach", 18, new Address("48 rue des paquerettes", "Paris", 75300, "France"), courseList, 25650 );
 		Students yves = new Students("yves", "dupont", 60, new Address("48 route des buissons", "Lyon", 69000, "France"), courseList, 95100 );
 		Students donovan = new Students("donovan", "seulin", 30, new Address("48 chemin des dames", "Lille", 59300, "France"), courseList, 75100 );
@@ -52,12 +52,12 @@ public class Data {
 	}
 
 	public static void addCourse() {
-		Course math = new Course("mathématique", new Date(0), new Date(),studentList, professorList.get(0));
-		Course musique = new Course("musique", new Date(0), new Date(),studentList, professorList.get(1));
-		Course francais = new Course("francais", new Date(0), new Date(),studentList, professorList.get(2));
-		Course histoire = new Course("histoire", new Date(0), new Date(),studentList, professorList.get(3));
-		Course geographie = new Course("geographie", new Date(0), new Date(),studentList, professorList.get(4));
-		Course anglais = new Course("anglais", new Date(0), new Date(),studentList, professorList.get(5));
+		Course math = new Course("mathï¿½matique", new Date(0), new Date(), studentList, professorList.get(0));
+		Course musique = new Course("musique", new Date(0), new Date(), studentList, professorList.get(1));
+		Course francais = new Course("francais", new Date(0), new Date(), studentList, professorList.get(2));
+		Course histoire = new Course("histoire", new Date(0), new Date(), studentList, professorList.get(3));
+		Course geographie = new Course("geographie", new Date(0), new Date(), studentList, professorList.get(4));
+		Course anglais = new Course("anglais", new Date(0), new Date(), studentList, professorList.get(5));
 		
 		courseList.add(math);
 		courseList.add(musique);

@@ -8,7 +8,7 @@ public class Course {
 	private String label;
 	private Date startDate;
 	private Date endDate;
-	private ArrayList<Person> studentList;
+	private ArrayList<Person> studentList = new ArrayList<Person>();
 	private Person professor;
 	private ArrayList<Course> courseList = new ArrayList<Course>();
 	
@@ -18,7 +18,7 @@ public class Course {
 		setLabel(label);
 		setStartDate(startDate);
 		setEndDate(endDate);
-		this.studentList = new ArrayList<Person>();
+		this.studentList = studentList;
 		setProfessor(professor);
 	}
 	
