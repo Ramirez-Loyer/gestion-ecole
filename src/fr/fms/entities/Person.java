@@ -6,19 +6,20 @@ public abstract class Person {
 	private String firstName;
 	private String lastName;
 	private int age;
+	private Address address;
 	
-	// Address address = new Address(String street, String city, String state, int postalCode);
 	
 	//constructor
 	public Person() {
 		super();	
 	}
 
-	public Person(String firstName, String lastName, int age) {
+	public Person(String firstName, String lastName, int age, Address address) {
 		super();
 		this.firstName = lastName;
 		this.lastName = firstName;
 		this.age = age;
+		this.address = new Address(address.getStreet(), address.getCity(), address.getState(), address.getPostalCode(), address.getCountry());
 	}
 	
 	
@@ -50,6 +51,15 @@ public abstract class Person {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 	@Override
