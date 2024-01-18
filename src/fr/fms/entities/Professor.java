@@ -13,16 +13,22 @@ public class Professor extends Person {
 		this.hireDate = hireDate;
 	}
 	
-	// getProfInfos
-	
-	public void modifyPerson(String lastName, String firstName, int age, Date hireDate, Address address, ArrayList<Course> course) {
-		this.lastName = lastName;
-		this.firstName = firstName;
-		this.age = age;
-		this.address = address;
-		this.hireDate = hireDate;
+	@Override
+	public String modifyPerson() {
+		// TODO Auto-generated method stub
+		return null;
 	}
+//	@Override
+//	public String modifyPerson(String lastName, String firstName, int age, Date hireDate, Address address, ArrayList<Course> course) {
+//		this.lastName = lastName;
+//		this.firstName = firstName;
+//		this.age = age;
+//		this.address = address;
+//		this.hireDate = hireDate;
+//	}
 	
+	@Override
+	//Pseudo codé !!!
 	public void removePerson(Prof) {
 		if (course.contains(Prof)) {
 			course.remove(prof);
@@ -56,6 +62,9 @@ public class Professor extends Person {
 				address;
 				;
 	}
+
+
+
 	
 	
 }
