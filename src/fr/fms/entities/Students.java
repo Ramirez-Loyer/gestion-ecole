@@ -14,7 +14,7 @@ public class Students extends Person {
 		this.studentNumber = studentNumber;
 	}
 	
-	public void modifyStudent(firstName , lastName , age)
+	public void modifyStudent( String name , String firstNam , int ages)
 	{
 		
 	}
@@ -35,14 +35,26 @@ public class Students extends Person {
 		this.studentNumber = studentNumber;
 	}
 
-	public void followCourse()
+	public ArrayList<Course> followCourse()
 	{
-		this.course = new ArrayList<Course>();
+		return this.course = new ArrayList<Course>();
 	}
-	@Override
+	
 	public String tostString() 
 	{
-		return super.toString() + "\n" + this.adress + "\n"  + this.course;
+		return super.toString() + "\n"  + this.course;
+	}
+
+	@Override
+	public String modifyPerson() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String removePerson() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
