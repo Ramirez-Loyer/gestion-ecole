@@ -9,8 +9,15 @@ public class Professor extends Person {
 	private ArrayList<Course> course = new ArrayList<>();
 	
 	public Professor(String firstName, String lastName, int age, Address address, ArrayList<Course> course, Date hireDate) {
-		super(lastName, firstName, age, address, course);
+		super(lastName, firstName, age);
 		this.hireDate = hireDate;
+	}
+	
+
+	@Override
+	public String removePerson() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	@Override
@@ -27,13 +34,6 @@ public class Professor extends Person {
 //		this.hireDate = hireDate;
 //	}
 	
-	@Override
-	//Pseudo codé !!!
-	public void removePerson(Prof) {
-		if (course.contains(Prof)) {
-			course.remove(prof);
-		} else return
-	}
 
 	public void assignCourse(Professor professor,String course) {
 		// trouver cours dans l'arrayList => course.add(professor)
@@ -58,10 +58,10 @@ public class Professor extends Person {
 	
 	public String toString() {
 		return super.toString() +  "\n" +
-				"Date d'embauche : " + hireDate + "\n" +
-				address;
+				"Date d'embauche : " + hireDate + "\n"
 				;
 	}
+
 
 
 
