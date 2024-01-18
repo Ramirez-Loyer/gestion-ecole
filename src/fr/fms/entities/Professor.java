@@ -9,15 +9,8 @@ public class Professor extends Person {
 	private ArrayList<Course> course = new ArrayList<>();
 	
 	public Professor(String firstName, String lastName, int age, Address address, ArrayList<Course> course, Date hireDate) {
-		super(lastName, firstName, age);
+		super(lastName, firstName, age, address);
 		this.hireDate = hireDate;
-	}
-	
-
-	@Override
-	public String removePerson() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 	
 	@Override
@@ -62,6 +55,11 @@ public class Professor extends Person {
 				;
 	}
 
+	@Override
+	public String removePerson() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 
 
