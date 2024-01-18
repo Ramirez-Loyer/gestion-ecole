@@ -8,17 +8,17 @@ public class Course<T> {
 	private String label;
 	private Date startDate;
 	private Date endDate;
-	private ArrayList<Student> studentList;
+	private ArrayList<Students> studentList;
 	private Professor professor;
 	private ArrayList<T> courseList = new ArrayList<T>();
 	
-	public Course(String label, Date startDate, Date endDate, ArrayList<Student> studentList,
+	public Course(String label, Date startDate, Date endDate, ArrayList<Students> studentList,
 			Professor professor) {
 		super();
 		setLabel(label);
 		setStartDate(startDate);
 		setEndDate(endDate);
-		this.studentList = new ArrayList<Student>();
+		this.studentList = new ArrayList<Students>();
 		setProfessor(professor);
 	}
 	
@@ -50,11 +50,11 @@ public class Course<T> {
 		this.endDate = endDate;
 	}
 
-	public ArrayList<Student> getStudentList() {
+	public ArrayList<Students> getStudentList() {
 		return studentList;
 	}
 
-	public void setStudentList(ArrayList<Student> studentList) {
+	public void setStudentList(ArrayList<Students> studentList) {
 		this.studentList = studentList;
 	}
 
