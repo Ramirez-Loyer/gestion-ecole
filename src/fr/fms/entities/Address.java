@@ -9,11 +9,11 @@ public class Address {
 	private String country;
 	
 	
-	public Address(String street, String city, String state, int postalCode, String country) {
+	public Address(String street, String city, int postalCode, String country) {
 		super();
 		this.street = street;
 		this.city = city;
-		this.state = state;
+		
 		this.postalCode = postalCode;
 		this.country = country;
 	}

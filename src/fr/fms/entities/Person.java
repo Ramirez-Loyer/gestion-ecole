@@ -19,7 +19,7 @@ public abstract class Person {
 		this.firstName = lastName;
 		this.lastName = firstName;
 		this.age = age;
-		this.address = new Address(address.getStreet(), address.getCity(), address.getState(), address.getPostalCode(), address.getCountry());
+		this.address = new Address(address.getStreet(), address.getCity(), address.getPostalCode(), address.getCountry());
 	}
 	
 	

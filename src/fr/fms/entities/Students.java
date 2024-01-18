@@ -40,9 +40,10 @@ public class Students extends Person {
 		return this.course = new ArrayList<Course>();
 	}
 	
-	public String tostString() 
+	@Override
+	public String toString() 
 	{
-		return super.toString() + "\n"  + this.course;
+		return super.toString()  + studentNumber;
 	}
 
 	@Override

@@ -3,22 +3,22 @@ package fr.fms.entities;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Course<T> {
+public class Course {
 	
 	private String label;
 	private Date startDate;
 	private Date endDate;
-	private ArrayList<Students> studentList;
-	private Professor professor;
-	private ArrayList<T> courseList = new ArrayList<T>();
+	private ArrayList<Person> studentList;
+	private Person professor;
+	private ArrayList<Course> courseList = new ArrayList<Course>();
 	
-	public Course(String label, Date startDate, Date endDate, ArrayList<Students> studentList,
-			Professor professor) {
+	public Course(String label, Date startDate, Date endDate, ArrayList<Person> studentList,
+			Person professor) {
 		super();
 		setLabel(label);
 		setStartDate(startDate);
 		setEndDate(endDate);
-		this.studentList = new ArrayList<Students>();
+		this.studentList = new ArrayList<Person>();
 		setProfessor(professor);
 	}
 	
@@ -50,23 +50,23 @@ public class Course<T> {
 		this.endDate = endDate;
 	}
 
-	public ArrayList<Students> getStudentList() {
+	public ArrayList<Person> getStudentList() {
 		return studentList;
 	}
 
-	public void setStudentList(ArrayList<Students> studentList) {
+	public void setStudentList(ArrayList<Person> studentList) {
 		this.studentList = studentList;
 	}
 
-	public Professor getProfessorList() {
+	public Person getProfessorList() {
 		return professor;
 	}
 
-	public void setProfessor(Professor professor) {
+	public void setProfessor(Person professor) {
 		this.professor = professor;
 	}
 	
-	public void addCourse(T course){
+	public void addCourse(Course course){
 		courseList.add(course);
 	}
 	
@@ -74,7 +74,7 @@ public class Course<T> {
 		
 	}
 	
-	public void  removeCourse(T course){
+	public void  removeCourse(Course course){
 		courseList.remove(course);
 	}
 
