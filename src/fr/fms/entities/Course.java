@@ -10,7 +10,7 @@ public class Course {
 	private Date endDate;
 	private ArrayList<Person> studentList = new ArrayList<Person>();
 	private Person professor;
-	private ArrayList<Course> courseList = new ArrayList<Course>();
+	private ArrayList<Course> courseList = Data.courseList;
 	
 	public Course(String label, Date startDate, Date endDate, ArrayList<Person> studentList,
 			Person professor) {
@@ -71,6 +71,7 @@ public class Course {
 	}
 	
 	public void  modifyCourse(){
+		
 		
 	}
 	
