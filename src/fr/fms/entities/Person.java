@@ -25,7 +25,7 @@ public abstract class Person {
 	
 	//methods
 	public abstract String modifyPerson();
-	public abstract String removePerson();
+	public abstract void removePerson();
 
 
 	//getters & setter

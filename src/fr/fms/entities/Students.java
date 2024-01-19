@@ -14,9 +14,11 @@ public class Students extends Person {
 		this.studentNumber = studentNumber;
 	}
 	
-	public void modifyStudent( String name , String firstNam , int ages)
+	public void modifyStudent( String firstName , String lastName , int ages)
 	{
-		
+		setFirstName(firstName);
+		setLastName(lastName);
+		setAge(ages);
 	}
 	
 	public ArrayList<Course> getCourse() {
@@ -53,9 +55,19 @@ public class Students extends Person {
 	}
 
 	@Override
-	public String removePerson() {
-		// TODO Auto-generated method stub
-		return null;
+	public void removePerson() {
+		
 	}
 	
+	public static void removeStudent(String student/*Students student*/) 
+	{
+		//Data.studentList.remove(student);
+		for ( Person studen : Data.studentList)
+		{
+			if( studen.getFirstName().equals(student))
+			{
+				Data.studentList.remove(studen);
+			}
+		}
+	}
 }
