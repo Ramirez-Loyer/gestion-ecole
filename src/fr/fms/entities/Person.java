@@ -26,7 +26,7 @@ public abstract class Person {
 	//methods
 
 
-	public abstract void modifyPerson(String personName);
+	public abstract void modifyPerson(String firstName , String lastName , int ages);
 	public abstract void removePerson(String personName);
 
 
