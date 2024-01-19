@@ -23,7 +23,7 @@ public class Data {
 		Students donovan = new Students("donovan", "seulin", 30,
 				new Address("48 chemin des dames", "Lille", 59300, "France"), courseList, 75100);
 		Students robert = new Students("robert", "luiz", 42,
-				new Address("48 rue des roses", "Bayonne", 64300, "France"), courseList, 12500);
+				new Address("48 rue des roses", "Toulouse", 64300, "France"), courseList, 12500);
 		Students kevin = new Students("kevin", "seulin", 33,
 				new Address("48 chemin des dames", "Lille", 59300, "France"), courseList, 19500);
 
@@ -70,7 +70,8 @@ public class Data {
 		Course musique = new Course("musique", LocalDate.now(), LocalDate.now(), studentList, professorList.get(1));
 		Course francais = new Course("francais", LocalDate.now(), LocalDate.now(), studentList, professorList.get(2));
 		Course histoire = new Course("histoire", LocalDate.now(), LocalDate.now(), studentList, professorList.get(3));
-		Course geographie = new Course("geographie", LocalDate.now(), LocalDate.now(), studentList, professorList.get(4));
+		Course geographie = new Course("geographie", LocalDate.now(), LocalDate.now(), studentList,
+				professorList.get(4));
 		Course anglais = new Course("anglais", LocalDate.now(), LocalDate.now(), studentList, professorList.get(5));
 
 		courseList.add(math);
@@ -109,20 +110,20 @@ public class Data {
 		// Trouver si address identique entre �l�ves
 	}
 
-	public static void removeProfessor(String professorName) {
-		// Recherche du professeur
-		int profIndex = -1;
-		for (Person prof : Data.professorList) {
-			if (prof.getLastName().equals(professorName)) {
-				profIndex = professorList.indexOf(prof);
-			} else {
-				System.out.println("Aucun professeur ne correspond !");
-			}
-		}
-		professorList.remove(profIndex);
-	}
+//	public static void removeProfessor(String professorName) {
+//		// Recherche du professeur
+//		int profIndex = -1;
+//		for (Person prof : Data.professorList) {
+//			if (prof.getLastName().equals(professorName)) {
+//				profIndex = professorList.indexOf(prof);
+//			} else {
+//				System.out.println("Aucun professeur ne correspond !");
+//			}
+//		}
+//		professorList.remove(profIndex);
+//	}
 
-	//Recherche adresse identiqueS
+	// Recherche adresse identiqueS
 	public static void isSibling() {
 
 		String student1Index = "";
@@ -130,14 +131,14 @@ public class Data {
 
 		for (int i = 0; i < Data.studentList.size(); i++) {
 			for (int j = i + 1; j < Data.studentList.size(); j++) {
-				if (Data.studentList.get(i).getAddress().getStreet()
-						.equals(Data.studentList.get(j).getAddress().getStreet())) {
+				if (Data.studentList.get(i).getAddress().getStreet().equals(Data.studentList.get(j).getAddress().getStreet()) 
+						&& (Data.studentList.get(i).getAddress().getCity().equals(Data.studentList.get(j).getAddress().getCity()) )) {
 					student1Index = Data.studentList.get(i).getFirstName();
 					student2Index = Data.studentList.get(j).getFirstName();
 				}
 			}
 		}
-		System.out.println(student1Index + " and " + student2Index + " are sibling !");
+		System.out.println((!student1Index.isEmpty()) ?(student1Index + " and " + student2Index + " are sibling !") : ("No sibling student founded"));
 
 	}
 }
