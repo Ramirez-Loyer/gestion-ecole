@@ -11,8 +11,15 @@ public class Gestion_ecole {
 		Data.addProfessor();
 		Data.addCourse();
 
+		System.out.println("Liste d'élève :");
 		Data.display(Data.studentList);
+		System.out.println();
+		
+		System.out.println("Liste des professeurs :");
 		Data.display(Data.professorList);
+		System.out.println();
+		
+		System.out.println("Liste des cours :");
 		Data.displayCourse();
 //		Data.displayStudentList("musique");
 

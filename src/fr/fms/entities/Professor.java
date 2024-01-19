@@ -40,7 +40,7 @@ public class Professor extends Person {
 		 SimpleDateFormat formater = null ;
 		 formater = new SimpleDateFormat("dd/MM/yy");
 		 
-		return super.toString() + "\n" + "Date d'embauche : " + formater.format(hireDate) + "\n";
+		return super.toString() + "Date d'embauche : " + formater.format(hireDate) + "]";
 	}
 
 	@Override

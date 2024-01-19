@@ -18,7 +18,7 @@ public class Course {
 		setLabel(label);
 		setStartDate(startDate);
 		setEndDate(endDate);
-		this.studentList = studentList;
+		setStudentList(studentList);
 		setProfessor(professor);
 	}
 	
@@ -85,8 +85,8 @@ public class Course {
 
 	@Override
 	public String toString() {
-		return "Course [label=" + label + ", startDate=" + startDate + ", endDate=" + endDate + ", studentList="
-				+ studentList + ", professorList=" + professor + "]";
+		return "[denomination : " + label + ", date de début : " + startDate + ", date de fin : " + endDate + ", liste d'élèves : "
+				+ studentList + ", ensignant : " + professor + "]";
 	}
 	
 	

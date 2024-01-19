@@ -72,8 +72,8 @@ public class Address {
 
 	@Override
 	public String toString() {
-		return "Address [street=" + street + ", city=" + city + ", state=" + state + ", postalCode=" + postalCode
-				+ ", country=" + country + "]";
+		return "Adresse : " + street + ", " + city + (state != null ? ", " + state : "") + ", " + postalCode
+				+ ", " + country + " ";
 	}
 	
 	

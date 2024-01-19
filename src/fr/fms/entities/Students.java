@@ -50,7 +50,7 @@ public class Students extends Person
 	@Override
 	public String toString() 
 	{
-		return super.toString() + studentNumber;
+		return super.toString() + "numero : " + studentNumber +"]";
 	}
 
 	@Override

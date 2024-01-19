@@ -34,9 +34,6 @@ public class Data {
 		studentList.add(donovan);
 		studentList.add(robert);
 
-		for (Person student : studentList) {
-			System.out.println(student);
-		}
 	}
 
 	public static void addProfessor() {
@@ -60,9 +57,6 @@ public class Data {
 		professorList.add(henri);
 		professorList.add(jacques);
 
-		for (Person prof : professorList) {
-			System.out.println(prof);
-		}
 	}
 
 	public static void addCourse() {
@@ -81,9 +75,6 @@ public class Data {
 		courseList.add(geographie);
 		courseList.add(anglais);
 
-		for (Course course : courseList) {
-			System.out.println(course);
-		}
 	}
 	
 	public static void display(ArrayList<Person> personList) {
