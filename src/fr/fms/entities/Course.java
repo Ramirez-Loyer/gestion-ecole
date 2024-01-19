@@ -70,7 +70,7 @@ public class Course {
 		courseList.add(course);
 	}
 	
-	public void modifyCourse(String label, LocalDate startDate, LocalDate endDate, ArrayList<Person> studentList, Professor professor){
+	public void modifyCourse(String label, LocalDate startDate, LocalDate endDate, ArrayList<Person> studentList, Person professor){
 		setLabel(label);
 		setStartDate(startDate);
 		setEndDate(endDate);

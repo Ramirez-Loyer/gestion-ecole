@@ -85,6 +85,18 @@ public class Data {
 			System.out.println(course);
 		}
 	}
+	
+	public static void display(ArrayList<Person> personList) {
+		for (Person person : personList) {
+			System.out.println(person);
+		}
+	}
+	
+	public static void displayCourse() {
+		for (Course course : courseList) {
+			System.out.println(course);
+		}
+	}
 
 	// Affiche la liste des �tudiants inscrit � un cours donn�.
 	public static void displayStudentList(String course) {
