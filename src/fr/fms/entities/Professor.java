@@ -71,7 +71,7 @@ public class Professor extends Person
 		{
 			if( professor.getFirstName().equals(prof))
 			{
-				Data.studentList.remove(prof);
+				Data.studentList.remove(professor);
 			}
 		}
 	}
