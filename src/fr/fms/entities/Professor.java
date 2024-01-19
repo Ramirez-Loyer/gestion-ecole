@@ -1,9 +1,9 @@
 package fr.fms.entities;
 
+import java.text.*;
 import java.util.*;
 
-public class Professor extends Person {
-
+public class Professor extends Person {	 
 	// r�cup�rer ArrayList de cours
 	private Date hireDate;
 	private ArrayList<Course> course = new ArrayList<>();
@@ -36,7 +36,11 @@ public class Professor extends Person {
 	}
 
 	public String toString() {
-		return super.toString() + "\n" + "Date d'embauche : " + hireDate + "\n";
+		//Formatage de la date au format (dd/MM/yy)
+		 SimpleDateFormat formater = null ;
+		 formater = new SimpleDateFormat("dd/MM/yy");
+		 
+		return super.toString() + "\n" + "Date d'embauche : " + formater.format(hireDate) + "\n";
 	}
 
 	@Override
@@ -54,5 +58,5 @@ public class Professor extends Person {
 			}
 		}
 	}
-	
+
 }
