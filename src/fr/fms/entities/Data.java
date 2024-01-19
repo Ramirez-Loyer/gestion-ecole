@@ -1,6 +1,7 @@
 package fr.fms.entities;
 
 import java.text.DateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -65,12 +66,12 @@ public class Data {
 	}
 
 	public static void addCourse() {
-		Course math = new Course("mathematique", new Date(0), new Date(), studentList, professorList.get(0));
-		Course musique = new Course("musique", new Date(0), new Date(), studentList, professorList.get(1));
-		Course francais = new Course("francais", new Date(0), new Date(), studentList, professorList.get(2));
-		Course histoire = new Course("histoire", new Date(0), new Date(), studentList, professorList.get(3));
-		Course geographie = new Course("geographie", new Date(0), new Date(), studentList, professorList.get(4));
-		Course anglais = new Course("anglais", new Date(0), new Date(), studentList, professorList.get(5));
+		Course math = new Course("mathematique", LocalDate.now(), LocalDate.now(), studentList, professorList.get(0));
+		Course musique = new Course("musique", LocalDate.now(), LocalDate.now(), studentList, professorList.get(1));
+		Course francais = new Course("francais", LocalDate.now(), LocalDate.now(), studentList, professorList.get(2));
+		Course histoire = new Course("histoire", LocalDate.now(), LocalDate.now(), studentList, professorList.get(3));
+		Course geographie = new Course("geographie", LocalDate.now(), LocalDate.now(), studentList, professorList.get(4));
+		Course anglais = new Course("anglais", LocalDate.now(), LocalDate.now(), studentList, professorList.get(5));
 
 		courseList.add(math);
 		courseList.add(musique);
@@ -84,7 +85,7 @@ public class Data {
 		}
 	}
 
-	// Affiche la liste des étudiants inscrit à un cours donné.
+	// Affiche la liste des ï¿½tudiants inscrit ï¿½ un cours donnï¿½.
 	public static void displayStudentList(String course) {
 		int courseNumber = -1;
 		switch (course) {
@@ -105,7 +106,7 @@ public class Data {
 		ArrayList<Person> studentsList = courseList.getStudentList();
 		System.out.println(course + " Student List" + studentsList);
 
-		// Trouver si address identique entre élèves
+		// Trouver si address identique entre ï¿½lï¿½ves
 	}
 
 	public static void removeProfessor(String professorName) {

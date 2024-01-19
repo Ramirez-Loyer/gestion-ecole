@@ -1,18 +1,18 @@
 package fr.fms.entities;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Course {
 	
 	private String label;
-	private Date startDate;
-	private Date endDate;
+	private LocalDate startDate;
+	private LocalDate endDate;
 	private ArrayList<Person> studentList = new ArrayList<Person>();
 	private Person professor;
 	private ArrayList<Course> courseList = Data.courseList;
 	
-	public Course(String label, Date startDate, Date endDate, ArrayList<Person> studentList,
+	public Course(String label, LocalDate startDate, LocalDate endDate, ArrayList<Person> studentList,
 			Person professor) {
 		super();
 		setLabel(label);
@@ -34,19 +34,19 @@ public class Course {
 		this.label = label;
 	}
 
-	public Date getStartDate() {
+	public LocalDate getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(LocalDate startDate) {
 		this.startDate = startDate;
 	}
 
-	public Date getEndDate() {
+	public LocalDate getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(Date endDate) {
+	public void setEndDate(LocalDate endDate) {
 		this.endDate = endDate;
 	}
 
@@ -70,8 +70,12 @@ public class Course {
 		courseList.add(course);
 	}
 	
-	public void  modifyCourse(){
-		
+	public void modifyCourse(String label, LocalDate startDate, LocalDate endDate, ArrayList<Person> studentList, Professor professor){
+		setLabel(label);
+		setStartDate(startDate);
+		setEndDate(endDate);
+		setStudentList(studentList);
+		setProfessor(professor);
 		
 	}
 	
