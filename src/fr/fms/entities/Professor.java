@@ -14,9 +14,9 @@ public class Professor extends Person {
 	}
 	
 	@Override
-	public String modifyPerson() {
+	public void modifyPerson(String personName) {
 		// TODO Auto-generated method stub
-		return null;
+
 	}
 //	@Override
 //	public String modifyPerson(String lastName, String firstName, int age, Date hireDate, Address address, ArrayList<Course> course) {
@@ -56,9 +56,10 @@ public class Professor extends Person {
 	}
 
 	@Override
-	public String removePerson() {
-		// TODO Auto-generated method stub
-		return null;
+	public void removePerson(String professorName) {
+	
+	
+
 	}
 
 

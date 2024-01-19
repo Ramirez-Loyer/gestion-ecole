@@ -24,8 +24,11 @@ public abstract class Person {
 	
 	
 	//methods
-	public abstract String modifyPerson();
-	public abstract void removePerson();
+
+
+	public abstract void modifyPerson(String personName);
+	public abstract void removePerson(String personName);
+
 
 
 	//getters & setter

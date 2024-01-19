@@ -3,13 +3,13 @@ package fr.fms.entities;
 import java.util.ArrayList;
 
 public class Students extends Person {
-	
+
 	private ArrayList<Course> course;
 	private int studentNumber;
-	
-	public Students ( String firstName , String lastName , int age , Address address , ArrayList<Course> course, int studentNumber)
-	{
-		super(firstName , lastName , age , address);
+
+	public Students(String firstName, String lastName, int age, Address address, ArrayList<Course> course,
+			int studentNumber) {
+		super(firstName, lastName, age, address);
 		this.course = followCourse();
 		this.studentNumber = studentNumber;
 	}
@@ -20,7 +20,7 @@ public class Students extends Person {
 		setLastName(lastName);
 		setAge(ages);
 	}
-	
+
 	public ArrayList<Course> getCourse() {
 		return course;
 	}
@@ -37,28 +37,21 @@ public class Students extends Person {
 		this.studentNumber = studentNumber;
 	}
 
-	public ArrayList<Course> followCourse()
-	{
+	public ArrayList<Course> followCourse() {
 		return this.course = new ArrayList<Course>();
 	}
-	
+
 	@Override
-	public String toString() 
-	{
-		return super.toString()  + studentNumber;
+	public String toString() {
+		return super.toString() + studentNumber;
 	}
 
 	@Override
-	public String modifyPerson() {
+	public void modifyPerson(String student) {
 		// TODO Auto-generated method stub
-		return null;
+
 	}
 
-	@Override
-	public void removePerson() {
-		
-	}
-	
 	public static void removeStudent(String student/*Students student*/) 
 	{
 		//Data.studentList.remove(student);
@@ -70,4 +63,11 @@ public class Students extends Person {
 			}
 		}
 	}
+
+	@Override
+	public void removePerson(String personName) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
