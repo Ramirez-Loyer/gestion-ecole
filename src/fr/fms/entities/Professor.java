@@ -14,8 +14,8 @@ public class Professor extends Person {
 		this.hireDate = hireDate;
 	}
 
-	public void assignCourse(Professor professor, String course) {
-		// trouver cours dans l'arrayList => course.add(professor)
+	public void assignCourse(Course course) {
+		this.course.add(course);
 
 	}
 
@@ -23,8 +23,8 @@ public class Professor extends Person {
 		return course;
 	}
 
-	public void setCourse(ArrayList<Course> course, Professor professor) {
-		// trouver le prof dans l'arrayList => course.add(professor)
+	public void setCourse(ArrayList<Course> course) {
+		this.course = course;
 	}
 
 	public Date getHireDate() {

@@ -30,24 +30,28 @@ public class Gestion_ecole {
 		
 		System.out.println("\n---------------------------------\n");
 		
-		ArrayList<Person> dessinStudents = new ArrayList<Person>();
-		dessinStudents.add(Data.studentList.get(1));
-		dessinStudents.add(Data.studentList.get(3));
-		dessinStudents.add(Data.studentList.get(5));
+		ArrayList<Person> pooStudents = new ArrayList<Person>();
 		
-		Course dessin = new Course("dessin", LocalDate().now(), LocalDate().now(), dessinStudents, Data.professorList.get(2));
+		Course poo = new Course("poo", LocalDate().now(), LocalDate().now(), pooStudents, Data.professorList.get(2));
 		
-		Person hernandez = new Professor("luiz", "hernandez", 42, new Address("63 rue des oliviers", "Strasbourg", 67000, "France"), Data.courseList, new Date());
+		pooStudents.add(Data.studentList.get(1));
+		pooStudents.add(Data.studentList.get(3));
+		pooStudents.add(Data.studentList.get(5));
 		
-		Data.professorList.add(hernandez);
+		Person mohamed = new Professor("el-babili", "mohamed", 42, new Address("63 rue des oliviers", "Toulouse", 31000, "France"), Data.courseList, new Date());
+		
+		Data.professorList.add(mohamed);
 		
 		Person max = new Students("max", "thirioux", 27,
 				new Address("48 boulevard des rois", "Paris", 75000, "France"), Data.courseList, 26310);
 		Data.studentList.add(max);
 		
-		dessin.addCourse(dessin);
+		poo.addCourse(poo);
 		
 		Data.displayCourse();
+		
+		Data.courseList.add(poo);
+		((Professor) Data.professorList.get(0)).assignCourse(poo);
 		
 		System.out.println("\n---------------------------------\n");
 
@@ -55,7 +59,7 @@ public class Gestion_ecole {
 		LocalDate endDate = LocalDate.of(2023, Month.DECEMBER, 17);
 		
 			
-		dessin.modifyCourse("SVT", startDate, endDate, dessinStudents, (Professor) Data.professorList.get(3));
+		poo.modifyCourse("UML", startDate, endDate, pooStudents, (Professor) Data.professorList.get(3));
 			
 		for(Course course : Data.courseList) {
 			System.out.println(course);
